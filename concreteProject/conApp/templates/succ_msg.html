@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+    <h1>Concrete Strength Predicition </h1>
+    <div class="fieldWrapper">
+      <h2>For the values</h2>
+      <p>Cement:{{data_cement}}</p>
+      <p>slag:{{data_slag}}</p>
+      <p>flyash:{{data_flyash}}</p>
+      <p>water:{{data_water}}</p>
+      <p>superplasticizer:{{data_superplasticizer}}</p>
+      <p>coarseaggreate:{{data_coarseaggreate}}</p>
+      <p>fineaggregate:{{data_fineaggregate}}</p>
+      <p>age:{{data_age}}</p>
+      <br>
+
+      <p>The Strength of the Concrete :{{y_pred}} MP </P>
+
+
+
+
+    <a  href="{% url 'conApp:con' %}">Concrete Strength Predicition</a>
+    <br>
+</div>
+{% endblock %}
